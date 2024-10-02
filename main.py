@@ -34,25 +34,25 @@ def fluxgen():
     url = f"https://flux.li/android/external/start.php?HWID={random_hwid}"
     return jsonify({"url": url})
 
-#@app.route('/arc_gen', methods=['GET'])
+@app.route('/arc_gen', methods=['GET'])
 def arc_gen():
     random_hwid = generate_random_hwid_arc()
     url = f"https://spdmteam.com/key-system-1?hwid={random_hwid}&zone=Europe/Rome&os=android"
     return jsonify({"url": url})
-
-#@app.route('/delta_gen', methods=['GET'])
+    
+@app.route('/delta_gen', methods=['GET'])
 def delta_gen():
     random_id = generate_random_id()
     url = f"https://gateway.platoboost.com/a/8?id={random_id}"
     return jsonify({"url": url})
 
-#@app.route('/hydro_gen', methods=['GET'])
+@app.route('/hydro_gen', methods=['GET'])
 def hydro_gen():
     random_id = generate_random_id()
     url = f"https://gateway.platoboost.com/a/2589?id={random_id}"
     return jsonify({"url": url})
 
-#@app.route('/cryptic_gen', methods=['GET'])
+@app.route('/cryptic_gen', methods=['GET'])
 def cryptic_gen():
     random_id = generate_random_id()
     url = f"https://gateway.platoboost.com/a/39097?id={random_id}"
